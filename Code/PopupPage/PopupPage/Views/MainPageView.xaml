@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PopupPage.Views.MainPageView"
+             Title="Popup Page Demo">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="{Binding ButtonText}" x:Name="ButtonPopup" Clicked="ButtonPopup_Clicked" FontSize="Large" HorizontalOptions="Center" BackgroundColor="Purple" TextColor="White" VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

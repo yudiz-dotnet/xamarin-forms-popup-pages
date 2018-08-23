@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+                 xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                 x:Class="PopupPage.Views.PopupPageView">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation DurationIn="400" DurationOut="300" EasingIn="SinOut" EasingOut="SinIn" HasBackgroundAnimation="True" PositionIn="Center" PositionOut="Center" ScaleIn="1.2"  ScaleOut="0.8" />
+    </pages:PopupPage.Animation>
+    <!--Here you can desing as per your requirement-->
+    <StackLayout Padding="20,20,20,20" HorizontalOptions="Center" VerticalOptions="Center">
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Frame CornerRadius="10" Grid.Row="0" BackgroundColor="#5DD6E5" BorderColor="Transparent" HasShadow="False" Margin="20,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Image Source="{Binding IconLogo}" HeightRequest="80"/>
+                        <Image Source="{Binding IconClose}" x:Name="ImageClose" HorizontalOptions="End" VerticalOptions="Start"/>
+                    </Grid>
+                </Grid>
+            </Frame>
+            <Frame CornerRadius="10" Grid.Row="0" BackgroundColor="#5DD6E5" BorderColor="Transparent" HasShadow="False"  Margin="10,130,10,0">
+            </Frame>
+            <Frame CornerRadius="10" Grid.Row="0" BackgroundColor="White" BorderColor="Transparent" HasShadow="False"  Margin="10,120,10,10">
+                <Grid BackgroundColor="White">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Text="{Binding LabelTitle}" TextColor="Black" HorizontalOptions="Center" FontAttributes="Bold" FontSize="20"/>
+                    <BoxView Grid.Row="1" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" WidthRequest="80" HeightRequest="4" Color="#5DD6E5"/>
+                    <Label Grid.Row="2" Text="{Binding LabelDescription}" TextColor="Black" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="17" Margin="10"/>
+                </Grid>
+            </Frame>
+        </Grid>
+    </StackLayout>
+</pages:PopupPage>
